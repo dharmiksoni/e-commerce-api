@@ -1,4 +1,4 @@
-# Hybr1d
+# E-commerce API's
 
 Instructions on `how to run project on local` 
 
