@@ -40,7 +40,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 const DB = mongoose.connection;
 DB.on('error', console.error.bind(console, 'connection error:'));
 DB.once('open', async () => {
-    server.listen(PORT, HOSTNAME, () => console.info(`Server is listening at http://${HOSTNAME}:${PORT} for ENV: ${process.env.ENV}`));
+    server.listen(PORT, HOSTNAME, () => console.info(`Server is listening at http://${HOSTNAME}:${PORT} for ENV: ${process.env.NODE_ENV}`));
 });
 
 module.exports = server;
