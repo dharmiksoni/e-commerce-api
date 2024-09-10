@@ -1,3 +1,8 @@
+Build status
+
+
+[![Build Status](https://dev.azure.com/softvelocity/my-work/_apis/build/status%2Fe-commerce-api-ci?branchName=master)](https://dev.azure.com/softvelocity/my-work/_build/latest?definitionId=5&branchName=master)
+
 # E-commerce API's
 
 Instructions on `how to run project on local` 
