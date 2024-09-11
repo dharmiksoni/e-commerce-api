@@ -12,7 +12,7 @@ const userRoutes = require('./platform/routes/user');
 
 // routes
 
-const HOSTNAME = process.env.HOST || '127.0.0.1';
+const HOSTNAME = '0.0.0.0';
 const PORT = process.env.PORT || 3001;
 const SERVICE_NAME = process.env.SERVICE_NAME || process.env.HOSTNAME || '';
 
@@ -40,7 +40,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 const DB = mongoose.connection;
 DB.on('error', console.error.bind(console, 'connection error:'));
 DB.once('open', async () => {
-    server.listen(PORT, HOSTNAME, () => console.info(`Server is listening at http://${HOSTNAME}:${PORT} for ENV: ${process.env.NODE_ENV}`));
+    server.listen(PORT, HOSTNAME, () => console.info(`Server is listening at http://0.0.0.0:${PORT} for ENV: ${process.env.NODE_ENV}`));
 });
 
 module.exports = server;
