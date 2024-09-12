@@ -45,7 +45,7 @@ ENV MONGO_URI=$MONGO_URI
 ENV PORT=$PORT
 ENV NODE_ENV=$NODE_ENV
 # EXPOSE PORT=3000
-EXPOSE 2222 80 3001
+EXPOSE $PORT
 
 CMD ["node", "server.js"]
 # Start pm2 using the ecosystem.config.js file
